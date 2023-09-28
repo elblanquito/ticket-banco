@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ticket</title>
+</head>
+<body>
+    <p>🚧 Pagina ticket 🚧</p>
+    <button id="ticketbtn">crear tiket</button>
+    <button id="ticketdelbtn">eliminar tiket tiket</button>
+    <input type="number" id="ticketdelinput">
+    <p id="tickettxt"></p>
+    <p id="ticketstxt"></p>
+</body>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="./ticket.js"></script>
+<style>
+    * {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: large;
+    }
+
+    #ticketdelinput{
+        width: 50px;
+    }
+
+</style>
+</html>

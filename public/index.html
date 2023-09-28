@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inicio</title>
+</head>
+<body>
+    <p>🚧MENU PRINCIPAL 🚧</p>
+    <input type="text" value="hola buenas" id="prueba">
+    <button id="pruebabtn">enviar</button>
+    <button id="fechabtn">fecha</button>
+    <button id="ticketbtn">¿que numero soy?</button>
+    <p id="pruebatxt"></p>
+    <br>
+    <br>
+    <a id="ticket" href='./components/ticket.html'>🪄 ticket 🪄</a>
+    <br>
+    <br>
+    <input id="escritorionum" type="number" value="1" min="1">
+    <div id="escritorioerror">escritorio ocupado</div>
+    <button id="escritorio" onclick="abrirescritorio()" >elije escritorio</button>
+    <button id="escritoriosresetbtn">resetear escritorios</button>
+    <div id="escritorioscont">escritorios activos:</div>
+    
+    <br>
+    <br>
+    <button id="pantalla">🖥️ pantalla 🖥️</button>
+</body>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="./index.js"></script>
+<style>
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    margin: 5px;
+}
+
+a{
+    display: inline-block;
+    padding: 6px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #727272;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+}
+
+a:hover {
+    background-color: #e4e4e4;
+}
+
+a:active {
+    background-color: #f7f7f7;
+}
+
+#escritorioerror {
+    color: red;
+}
+
+#ticketdelinput{
+        width: 50px;
+    }
+
+    #escritorioscont {
+        max-width: 400px;
+        padding: 10px;
+        border: solid 3px rgb(0, 0, 0);
+        background-color: rgb(0, 0, 0);
+        font-size: 35px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        -webkit-text-stroke-color: 4px black;
+        text-align: center;
+    }
+
+    .tituloescritorios{
+        font-size: 35px;
+    }
+
+    .escritorio{
+        font-weight: bold;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        border: solid 1px black;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        transition: transform 0.1s ease-in-out;
+    }
+
+    .escritorio:hover{
+        transform: scale(1.03) rotate(1deg);
+        box-shadow: 0px 0px 10px rgb(47, 255, 29);
+        border: solid 1px rgb(18, 218, 0);
+        user-select: none;
+    }
+
+    .escritorio:active{
+        background-color: aqua;
+    }
+
+    .escritorio2{
+        border-radius: 10px;
+        padding: 10px;
+        margin: 20px;
+        border: solid 1px black;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        transition: transform 0.1s ease-in-out;
+        user-select: none;
+    }
+
+</style>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>escritorio</title>
+</head>
+<body>
+    <p id="titulo">💾 escritorio 💾</p>
+    <p id="escritoriotxt">quee</p>
+    <button id="ticketbtn">crear tiket</button>
+    <button id="ticketdelbtn">eliminar tiket tiket</button>
+    <input type="number" id="ticketdelinput">
+    <p id="tickettxt"></p>
+    <div id="ticketscont">
+        <div class="titulotikets">pendientes:</div>
+        <button class="ticket" onclick="atender('[1]')">
+            tiket #[1]
+        </button>
+    </div>
+</body>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="./escritorio.js"></script>
+<style>
+    * {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: large;
+    }
+
+    #ticketdelinput{
+        width: 50px;
+    }
+
+    #ticketscont {
+        max-width: 400px;
+        padding: 10px;
+        border: solid 3px rgb(0, 0, 0);
+        background-color: rgb(54, 158, 255);
+        font-size: 35px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        -webkit-text-stroke-color: 4px black;
+        text-align: center;
+    }
+
+    .titulotikets{
+        font-size: 35px;
+    }
+
+    .ticket{
+        border-radius: 10px;
+        padding: 10px;
+        margin: 20px;
+        border: solid 1px black;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        transition: transform 0.1s ease-in-out;
+    }
+
+    .ticket:hover{
+        transform: scale(1.03) rotate(1deg);
+        box-shadow: 0px 0px 10px rgb(0, 89, 255);
+        user-select: none;
+    }
+
+    .ticket:active{
+        background-color: aqua;
+    }
+
+    .ticket2{
+        border-radius: 10px;
+        padding: 10px;
+        margin: 20px;
+        border: solid 1px black;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        transition: transform 0.1s ease-in-out;
+        user-select: none;
+    }
+
+</style>
+</html>

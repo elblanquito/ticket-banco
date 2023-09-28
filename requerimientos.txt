@@ -1,0 +1,30 @@
+PAGINA PRINCIPAL=======================
+
+- ir a crear tikets
+
+- ir a visualizar tikets en proceso
+
+- generar y ir a escritorios
+
+
+
+CREAR TIKETS=============================
+
+- mostrar tiket actual
+
+- generar tiket
+
+
+VISUALIZAR TIKETS EN PROCESO=============
+
+- mostrar el tiket y el escritorio que
+  lo esta atendiendo
+
+
+ESCRITORIO =============================
+
+- tikets disponibles
+
+- atender tiket
+
+- tiket atendido actual
