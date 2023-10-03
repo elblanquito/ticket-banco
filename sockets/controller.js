@@ -85,8 +85,8 @@ const controllerSockets = (socket) => {
         })
     })
     socket.on('escritorioadd',async(escritorioadd,callback)=>{
-        if (!escritorios.includes(escritorioadd)){
-            escritorios.push(escritorioadd)
+        if (!escritorios.some(escritorio => escritorio.numero === escritorioadd.numero)){
+            escritorios.push({numero: escritorioadd, ticket: '- - -'})
         }
         callback({
             'escritorios': escritorios,
@@ -110,6 +110,10 @@ const controllerSockets = (socket) => {
 let ticket = 0
 let tickets = []
 
-let escritorios = []
+let escritorios = [
+    {numero: 1, ticket: '- - -'},
+    {numero: 2, ticket: '- - -'},
+    {numero: 3, ticket: '- - -'},
+    {numero: 4, ticket: '- - -'}]
 
 export default controllerSockets

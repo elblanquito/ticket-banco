@@ -2,8 +2,8 @@ function print(callback) {
     let escritorioslista = ""
     for (let i = 0; i < callback.escritorios.length; i++) {
         escritorioslista += 
-        `<button class="escritorio" onclick="abrirescritorio(${callback.escritorios[i]})">
-            🖥️${callback.escritorios[i]}
+        `<button class="escritorio" onclick="abrirescritorio(${callback.escritorios[i].numero})">
+            🖥️${callback.escritorios[i].numero}
         </button>`
     }
 
@@ -54,13 +54,7 @@ fechabtn.addEventListener('click', () => {
     });
 });
 
-ticketbtn.addEventListener('click', () => {
-    socket.emit('ticketadd',(msg) => {
-        console.log(msg);
-        pruebatxt.innerHTML = 'su ticket es '+msg
-    });
-    
-});
+
 
 
 function abrirescritorio(x) {
@@ -87,17 +81,17 @@ function abrirescritorio(x) {
         }
     }
     });
-
-    escritoriosresetbtn.addEventListener('click', () => {
-        socket.emit('escritorioreset',(callback) => {
-            print(callback)
-        });
-    });
-
-
-
-
 };
+
+
+
+escritoriosresetbtn.addEventListener('click', () => {
+    socket.emit('escritoriosreset',(callback) => {
+        print(callback)
+    });
+    
+});
+
 
 
 

@@ -30,7 +30,7 @@ function print2(callback) {
 function atender(ticket){
     console.log(ticket)
     let ticketdel = ticket
-    socket.emit('ticketdel', ticketdel ,(callback) => {
+    socket.emit('ticketdel', ticketdel, /* numeroescritorio , */(callback) => {
         console.log(callback.estado);
         print(callback)
     });
